@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./Display.css";
-import ImageModal from "./ImageModal";
 
 const Display = ({ contract, account }) => {
   const [data, setData] = useState([]);
@@ -19,22 +18,12 @@ const Display = ({ contract, account }) => {
     } catch (e) {
       alert("You don't have access");
       return;
-      return;
     }
 
     const isEmpty = Object.keys(dataArray).length === 0;
 
     if (!isEmpty) {
       const str = dataArray.toString();
-      const strArray = str.split(",");
-      const images = strArray.map((item) => {
-        // Ensure the URL is correctly formed
-        let sanitizedItem = item.trim();
-        if (sanitizedItem.startsWith("ipfs://")) {
-          sanitizedItem = sanitizedItem.replace("ipfs://", "https://gateway.pinata.cloud/ipfs/");
-        }
-        console.log("Sanitized URL:", sanitizedItem); // Debugging output
-        return sanitizedItem;
       const strArray = str.split(",");
       const images = strArray.map((item) => {
         // Ensure the URL is correctly formed
@@ -86,6 +75,5 @@ const Display = ({ contract, account }) => {
     </>
   );
 };
-
 
 export default Display;
