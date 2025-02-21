@@ -30,7 +30,7 @@ function App() {
         const address = await signer.getAddress();
         setAccount(address);
 
-        const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3"; // Replace with your deployed contract address
+        const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3"; // Replace with your deployed contract address 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0
         const deployedContract = new Contract(contractAddress, Upload.abi, signer);
 
         setContract(deployedContract);
@@ -55,7 +55,7 @@ function App() {
       )}
 
       <div className="App">
-        <h1 style={{ color: "white" }}>Gdrive 3.0</h1>
+        <h1 style={{ color: "white" }}>LedgerBox</h1>
         <div className="bg"></div>
         <div className="bg bg2"></div>
         <div className="bg bg3"></div>

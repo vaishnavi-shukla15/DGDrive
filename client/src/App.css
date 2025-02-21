@@ -1,3 +1,54 @@
+body {
+  margin: 0;
+  height: 100%;
+  background: url('./Blockchain Technology from Builtin.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+body:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0); /* Dark overlay */
+  z-index: -1;
+  pointer-events: none;
+}
+
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.3;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -2; /* Place it behind the overlay */
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+
+.bg3 {
+  animation-duration: 5s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+
+/* Your existing styles */
 .App {
   text-align: center;
 }
@@ -36,34 +87,6 @@
     transform: rotate(360deg);
   }
 }
-html {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-}
-
-.bg {
-  animation: slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
-  bottom: 0;
-  left: -50%;
-  opacity: 0.5;
-  position: fixed;
-  right: -50%;
-  top: 0;
-  z-index: -1;
-}
-
-.bg2 {
-  animation-direction: alternate-reverse;
-  animation-duration: 4s;
-}
-
-.bg3 {
-  animation-duration: 5s;
-}
 
 .content {
   background-color: rgba(255, 255, 255, 0.8);
@@ -78,27 +101,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-h1 {
-  font-family: monospace;
-}
-
-@keyframes slide {
-  0% {
-    transform: translateX(-25%);
-  }
-  100% {
-    transform: translateX(25%);
-  }
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-body {
-  height: 900px;
-}
 header {
   text-align: center;
   width: 100%;
@@ -109,6 +111,7 @@ header {
   overflow: hidden;
   border-radius: 0 0 85% 85% / 30%;
 }
+
 header .overlay {
   width: 100%;
   height: 100%;
@@ -129,6 +132,7 @@ p {
   font-family: "Open Sans", sans-serif;
   margin-bottom: 30px;
 }
+
 .share {
   padding: 16px;
   margin-top: 10px;
@@ -141,7 +145,6 @@ p {
   border-radius: 4px;
   font-size: 13px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  z-index: -1;
 }
 
 .share:hover {
